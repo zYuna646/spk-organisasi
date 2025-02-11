@@ -15,7 +15,7 @@ class LaporanController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->slug == 'organisasi') {
+        if (Auth::user()->role->slug == 'organisasi') {
             $data = Laporan::where('organisasi_id', Auth::user()->organisasi->id)->get();
         } else {
             $data = Laporan::latest()->get();

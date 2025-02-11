@@ -16,7 +16,7 @@ class KegiatanController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->slug == 'organisasi') {
+        if (Auth::user()->role->slug == 'organisasi') {
             $data = Kegiatan::where('organisasi_id', Auth::user()->organisasi->id)->get();
         }
         else

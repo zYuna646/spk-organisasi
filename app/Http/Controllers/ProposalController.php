@@ -15,11 +15,9 @@ class ProposalController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->slug == 'organisasi') {
+        if (Auth::user()->role->slug == 'organisasi') {
             $data = Proposal::where('organisasi_id', Auth::user()->organisasi->id)->get();
-        }
-        else
-        {
+        } else {
             $data = Proposal::latest()->get();
         }
         return view('admin.master-data.proposal.index', [
@@ -37,9 +35,7 @@ class ProposalController extends Controller
     {
         if (Auth::user()->slug == 'organisasi') {
             $data = Organisasi::where('id', Auth::user()->organisasi->id)->get();
-        }
-        else
-        {
+        } else {
             $data = Organisasi::latest()->get();
         }
         return view('admin.master-data.proposal.create', [
@@ -55,7 +51,8 @@ class ProposalController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, 
+        $this->validate(
+            $request,
             [
                 'organisasi_id' => 'required',
                 'nama_kegiatan' => 'required|max:255',
@@ -132,9 +129,7 @@ class ProposalController extends Controller
     {
         if (Auth::user()->slug == 'organisasi') {
             $data = Organisasi::where('id', Auth::user()->organisasi->id)->get();
-        }
-        else
-        {
+        } else {
             $data = Organisasi::latest()->get();
         }
 
@@ -171,7 +166,8 @@ class ProposalController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, 
+        $this->validate(
+            $request,
             [
                 'organisasi_id' => 'required',
                 'nama_kegiatan' => 'required|max:255',
