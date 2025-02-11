@@ -48,6 +48,10 @@ class AdminController extends Controller
             ];
         });
 
+        $provinis = $data->where('skala_kegiatan', 'provinsi')->count();
+        $nasional = $data->where('skala_kegiatan', 'nasional')->count();
+        $daerah = $data->where('skala_kegiatan', 'daerah')->count();
+
 
         return view('admin.dashboard', [
             'title' => 'Dashboard',
@@ -58,6 +62,9 @@ class AdminController extends Controller
             'proposal' => Proposal::count(),
             'kegiatan' => Kegiatan::count(),
             'laporan' => Laporan::count(),
+            'provinis' => $provinis,
+            'nasional' => $nasional,
+            'daerah' => $daerah,
         ]);
     }
 

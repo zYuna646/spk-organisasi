@@ -151,6 +151,51 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Card Total Proposal -->
+            <div class="col-md-4">
+                <div class="card shadow-lg border-0 text-white bg-primary">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h5 class="card-title">Total Kegiatan Nasional</h5>
+                                <h2>{{ $nasional }}</h2>
+                            </div>
+                            <i class="fas fa-file-alt fa-3x"></i> <!-- Ikon Proposal -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-lg border-0 text-white bg-primary">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h5 class="card-title">Total Kegiatan Provinsi</h5>
+                                <h2>{{ $provinis }}</h2>
+                            </div>
+                            <i class="fas fa-file-alt fa-3x"></i> <!-- Ikon Proposal -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card shadow-lg border-0 text-white bg-primary">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h5 class="card-title">Total Kegiatan Daerah</h5>
+                                <h2>{{ $daerah }}</h2>
+                            </div>
+                            <i class="fas fa-file-alt fa-3x"></i> <!-- Ikon Proposal -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <!-- Calendar Section on the Left -->
             <div class="col-lg-6 col-md-12">
                 <div class="card shadow-lg border-0">
@@ -189,6 +234,8 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
 
         <!-- Modal for Activity Details -->
