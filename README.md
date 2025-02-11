@@ -1,8 +1,4 @@
 
-# TETHUNA ONLINE STORE
-
-TETHUNA STORE is an online marketplace for a wide array of exquisite products crafted from the finest Karawo materials. We take great pride in curating a unique collection of items that showcase the beauty, versatility and cultural significance of Karawo, a material known for its exceptional quality and sustainable sourcing.
-
 
 ## How to set up a project
 
@@ -22,7 +18,7 @@ For this project, I'm using phpMyAdmin Database. On your .env file, locate this 
   DB_CONNECTION=mysql
   DB_HOST=127.0.0.1
   DB_PORT=3306
-  DB_DATABASE=db_tethunastore
+  DB_DATABASE=
   DB_USERNAME=root
   DB_PASSWORD=
 ```
